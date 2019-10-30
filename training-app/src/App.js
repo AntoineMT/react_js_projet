@@ -12,7 +12,7 @@ class App extends Component {
       <div>
         <Welcome name="AntoineMT" />
         <Messagerie />
-        {/* <FormAddition /> */}
+        <FormAddition />
       </div>
 
     );
