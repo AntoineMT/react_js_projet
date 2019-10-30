@@ -11,7 +11,7 @@ export const addMessage = (message) => ({
 })
 
 export const getMessages = () => {
-    return despatch => {
+    return dispatch => {
         dispatch({ type: MESSAGE_GET });
 
         return fetch('https://bonjour.com')
@@ -19,7 +19,12 @@ export const getMessages = () => {
             .then(messages => {
                 dispatch({ type: GET_MESSAGE_SUCCESS_ACTION, messages });
             })
-            .catch(error => { dispatch({ type: GET_MESSAGE_FAILED_ACTION }) 
+            .catch(error => { 
+                console.warn(error);
+                dispatch({ 
+                type: GET_MESSAGE_FAILED_ACTION,
+                 error 
+            }) 
         })
     }
 }
