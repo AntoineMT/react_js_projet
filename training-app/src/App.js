@@ -12,9 +12,6 @@ class App extends Component {
       <div>
         <Welcome name="AntoineMT" />
         <Messagerie />
-        {/* <Welcome name="Sara" /> */}
-        
-        {/* <Addition nb1={4} nb2={2} /> */}
         <FormAddition />
       </div>
 

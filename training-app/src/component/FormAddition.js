@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import '../App.css';
 
 export default class FormAddition extends Component {
-   constructor(props) {
+  constructor(props) {
     super(props);
-    this.state = {Nombre1 : '', Nombre2 : ''};
+    this.state = { Nombre1: '', Nombre2: '' };
 
 
     this.Nombre1 = this.Nombre1.bind(this);
@@ -13,27 +13,25 @@ export default class FormAddition extends Component {
   }
 
   Nombre1(event) {
-    // alert('Nom');
-    this.setState({Nombre1: event.target.value});
+    this.setState({ Nombre1: event.target.value });
   }
   Nombre2(event) {
-    // alert('Prenom');
-    this.setState({Nombre2: event.target.value});
+    this.setState({ Nombre2: event.target.value });
   }
 
   handleSubmit() {
 
     let Nb1 = parseInt(this.state.Nombre1);
     let Nb2 = parseInt(this.state.Nombre2);
-    let $somme =  Nb1 + Nb2
-    let $message =   'Calcul de : '+ Nb1 + ' et ' +  Nb2 + ' est egal à ' + $somme;
-    alert($message) ;
+    let $somme = Nb1 + Nb2
+    let $message = 'Calcul de : ' + Nb1 + ' et ' + Nb2 + ' est egal à ' + $somme;
+    alert($message);
 
   }
 
   render() {
     return (
-<form>
+      <form>
         <label>
           Nombre 1 :
           <input type="text" value={this.state.Nombre1} onChange={this.Nombre1} />
@@ -43,7 +41,7 @@ export default class FormAddition extends Component {
           <input type="text" value={this.state.Nombre2} onChange={this.Nombre2} />
         </label>
         <input type="submit" value="Envoyer" onClick={this.handleSubmit} />
-        </form>
+      </form>
 
     );
   }
