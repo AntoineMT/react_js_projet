@@ -8,6 +8,11 @@ class LoginComponent extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  handleSubmit(e) {
+    this.props.history.push('/Messagerie');
+    
+  }
+
   render() {
     return (
       <div>
@@ -27,10 +32,6 @@ class LoginComponent extends Component {
     );
   }
 
-  handleSubmit(e) {
-    this.props.history.push('/Messagerie');
-    
-  }
 }
 
 export default withRouter (LoginComponent);

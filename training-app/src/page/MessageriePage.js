@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 // import React from 'react';
 // import { connect } from 'react-redux';
-import TodoList from'../component/TodoListComponent.js';
+import TodoList from '../component/TodoListComponent.js';
 
 
 export default class MessageriePage extends Component {
@@ -18,7 +18,7 @@ export default class MessageriePage extends Component {
         <TodoList items={this.state.items} />
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="new-todo">
-            Chat       
+            Chat
           </label>
           <input
             id="new-todo"

@@ -7,7 +7,7 @@ export default class TodoListComponent extends Component {
     return (
       <ul>
         {this.props.items.map(item => (
-           <li key={item.id}> Antoine : {item.text}</li>
+           <li key={item.id}> Thibault : {item.text}</li>
         ))}
       </ul>
     );

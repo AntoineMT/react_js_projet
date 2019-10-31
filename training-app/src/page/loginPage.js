@@ -9,7 +9,7 @@ class LoginPage extends Component {
 
 
   render() {
-    return (   
+    return (
       <div>
         <LoginComponent />
       </div>

@@ -14,17 +14,17 @@ export const getMessages = () => {
     return dispatch => {
         dispatch({ type: MESSAGE_GET });
 
-        return fetch('https://bonjour.com')
+        return fetch('https://api.com')
             .then(response => response.json())
             .then(messages => {
                 dispatch({ type: GET_MESSAGE_SUCCESS_ACTION, messages });
             })
-            .catch(error => { 
+            .catch(error => {
                 console.warn(error);
-                dispatch({ 
-                type: GET_MESSAGE_FAILED_ACTION,
-                 error 
-            }) 
-        })
+                dispatch({
+                    type: GET_MESSAGE_FAILED_ACTION,
+                    error
+                })
+            })
     }
 }
