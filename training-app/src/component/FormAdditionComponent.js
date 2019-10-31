@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 
-export default class FormAddition extends Component {
+export default class FormAdditionComponent extends Component {
   constructor(props) {
     super(props);
     this.state = { Nombre1: '', Nombre2: '' };

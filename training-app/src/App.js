@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
-import Welcome from './component/Walcome.js';
-// import Addition from './component/Addition.js';
-import FormAddition from './component/FormAddition.js';
-
-import Messagerie from './component/Messagerie.js';
+import WalcomeComponent from './component/WalcomeComponent.js';
+import FormAdditionComponent from './component/FormAdditionComponent.js';
+import MessageriePage from './page/MessageriePage.js';
 
 class App extends Component {
 
   render() {
     return (
       <div>
-        <Welcome name="AntoineMT" />
-        <Messagerie />
-        <FormAddition />
+        <WalcomeComponent name="AntoineMT" />
+        <MessageriePage />
+        <FormAdditionComponent />
       </div>
 
     );
