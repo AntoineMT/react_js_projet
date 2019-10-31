@@ -3,14 +3,20 @@ import LoginComponent from '../component/LoginComponent.js';
 
 
 class LoginPage extends Component {
+  constructor(props) {
+    super(props);
+  }
+
 
   render() {
-    return (
+    return (   
       <div>
-        <LoginComponent/>
+        <LoginComponent />
       </div>
     );
   }
 }
+
+
 
 export default LoginPage;

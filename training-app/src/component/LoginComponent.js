@@ -1,37 +1,36 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 
 class LoginComponent extends Component {
+
+  constructor(props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
 
   render() {
     return (
       <div>
-        <label for="name">Name (4 to 8 characters):</label>
+        <label for="name">Name (1 to 15 characters):</label>
         <input type="text" id="name" name="name" required
-          minlength="4" maxlength="8" size="10">
+          minlength="1" maxlength="15" size="15">
         </input>
+        <label for="lastname">Lastname (1 to 15 characters):</label>
+        <input type="text" id="lastname" name="lastname" required
+          minlength="1" maxlength="15" size="15">
+        </input>
+        <input type="submit" value="Envoyer" 
+        onClick={this.handleSubmit} 
+        />
       </div>
 
     );
   }
 
-  handleChange(e) {
-    this.setState({ text: e.target.value });
-  }
-
   handleSubmit(e) {
-    e.preventDefault();
-    if (!this.state.text.length) {
-      return;
-    }
-    const newItem = {
-      text: this.state.text,
-      id: Date.now()
-    };
-    this.setState(state => ({
-      items: state.items.concat(newItem),
-      text: ''
-    }));
+    this.props.history.push('/Messagerie');
+    
   }
 }
 
-export default LoginComponent;
+export default withRouter (LoginComponent);
