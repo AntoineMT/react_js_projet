@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import LoginPage from './page/loginPage.js';
+import LoginPage from './page/LoginPage.js';
 
-ReactDOM.render(<LoginPage />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 serviceWorker.unregister();
